@@ -117,3 +117,11 @@ Esperar revisión del formulario de Contacto; implementar las demás secciones s
 ## Cómo mantener este archivo
 
 Después de cada avance, actualizar el estado correspondiente con lo implementado, las comprobaciones realmente ejecutadas, los bloqueos y el siguiente paso. Reemplazar información superada en lugar de acumular instrucciones contradictorias. Mantener este archivo breve; el contenido y diseño completos pertenecen a CONTENT.md y DESIGN.md.
+
+
+## Infraestructura CloudFront preparada — 30 de octubre de 2026
+
+- Añadida carpeta `infra/terraform` con S3 privado, CloudFront OAC/HTTPS, rutas SPA y script PowerShell de publicación de `dist` incluyendo `img`.
+- Publicación de estos archivos en `main` autorizada por el usuario; no se ha ejecutado infraestructura ni despliegue en AWS.
+- Validación: revisión estática y 12 pruebas Node de rutas aprobadas. Terraform fmt/validate/plan, PowerShell y build completo pendientes de ejecución en un entorno equipado; no afirmar despliegue validado.
+- Siguiente paso: seleccionar perfil/cuenta AWS, ejecutar validaciones y revisar el plan antes de autorizar/applicar recursos; seguir `infra/terraform/README.md`. Los backends de formularios siguen fuera de este alcance.
