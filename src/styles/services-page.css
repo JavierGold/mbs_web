@@ -43,6 +43,9 @@
   background: var(--color-blue);
   border-color: var(--color-blue);
 }
+.services-page__hero-action-arrow {
+  display: none;
+}
 .services-page__graphic {
   margin: 0;
   display: flex;
@@ -141,6 +144,36 @@
   }
   .service-detail__media {
     gap: 0.8rem;
+  }
+}
+@media (max-width: 680px) {
+  .services-page__hero-inner {
+    gap: 2.5rem;
+  }
+  .services-page__hero .services-page__hero-action {
+    width: auto;
+    min-height: 2.75rem;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    justify-content: flex-start;
+    gap: 0.65rem;
+    text-align: left;
+  }
+  .services-page__hero .services-page__hero-action,
+  .services-page__hero .services-page__hero-action:hover,
+  .services-page__hero .services-page__hero-action:active,
+  .services-page__hero .services-page__hero-action:focus-visible {
+    color: var(--color-blue);
+    background: transparent;
+    border-color: transparent;
+  }
+  .services-page__hero-action-arrow {
+    display: inline;
+  }
+  .services-page__hero-action:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
   }
 }
 @media (max-width: 560px) {

@@ -71,7 +71,7 @@ export function UniversityPage() {
         <motion.div className="university-page__hero-copy" variants={revealVariants.heroGroup} initial={reducedMotion ? false : 'hidden'} animate="visible">
           <motion.h1 id="university-hero-title" variants={revealVariants.heroText}>{content.hero.titleStart}<span>{content.hero.titleAccent}</span>{content.hero.titleEnd}</motion.h1>
           <motion.p variants={revealVariants.heroText}>{content.hero.descriptionStart}<span>{content.hero.descriptionAccent}</span>{content.hero.descriptionEnd}</motion.p>
-          <motion.a className="button button--outline university-page__hero-button" variants={revealVariants.heroText} href={content.hero.buttonHref}>{content.hero.button}</motion.a>
+          <motion.a className="button button--outline university-page__hero-button" variants={revealVariants.heroText} href={content.hero.buttonHref}>{content.hero.button}<span className="university-page__hero-button-arrow" aria-hidden="true">→</span></motion.a>
         </motion.div>
         <figure className="university-page__hero-art">
           <HeroImage src={content.hero.image} width={content.hero.imageWidth} height={content.hero.imageHeight} alt="Laptop con código y libro técnico abierto." />

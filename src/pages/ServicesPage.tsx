@@ -14,7 +14,7 @@ export function ServicesPage() {
         <motion.div className="services-page__hero-copy" variants={revealVariants.heroGroup} initial={reducedMotion ? false : 'hidden'} animate="visible">
           <motion.h1 id="services-page-title" variants={revealVariants.heroText}>{hero.titleBefore} <span>{hero.titleAccent}</span>.</motion.h1>
           <motion.p variants={revealVariants.heroText}>{hero.text}</motion.p>
-          <motion.a className="button button--outline services-page__hero-action" variants={revealVariants.heroText} href="/contacto">{hero.button}</motion.a>
+          <motion.a className="button button--outline services-page__hero-action" variants={revealVariants.heroText} href="/contacto">{hero.button}<span className="services-page__hero-action-arrow" aria-hidden="true">→</span></motion.a>
         </motion.div>
         <figure className="services-page__graphic">
           <HeroImage src={hero.image} width={hero.imageWidth} height={hero.imageHeight} alt="" />

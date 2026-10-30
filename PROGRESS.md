@@ -147,3 +147,13 @@ Después de cada avance, actualizar el estado correspondiente con lo implementad
 - Separación de 40 px antes del gráfico; imagen centrada al 80% del ancho disponible, sin márgenes negativos ni recortes. El hero conserva altura natural y permite desplazamiento.
 - Escritorio y las otras páginas permanecen sin cambios; se conservan destinos, textos, colores y animación de HeroImage.
 - Validado: build TypeScript/Vite correcto y revisión dirigida de reglas responsive. No hay scripts de lint o tests en package.json. La validación visual en navegador real sigue pendiente porque Chromium no inicia en este entorno.
+
+### 2026-10-30 · CTA del hero de Servicios en móvil
+- Cambio autorizado solo hasta 680 px: «Hablemos de tu proyecto» pasa a enlace azul con flecha, sin fondo ni recuadro, alineado con el texto y área táctil mínima de 44 px.
+- Separación de 40 px antes del gráfico; tamaño y proporción de la ilustración intactos. Se conserva el destino `/contacto` sin ancla.
+- Escritorio, Inicio y otras páginas sin cambios. Build TypeScript/Vite correcto; revisión visual real pendiente por la limitación ya constatada de Chromium (sockets no permitidos).
+
+### 2026-10-30 · University y Contacto del menú móvil
+- Autorizado ampliar el mismo estilo de enlace azul con flecha, sin recuadro/fondo, al CTA del hero University y a Contacto del menú hasta 680 px.
+- University mantiene gráfico, enlace al formulario y offset; conserva 40 px antes de la ilustración. Contacto queda alineado con los demás enlaces, con la misma tipografía y foco/indicador de ruta activa. No se cambia la lógica de navegación, cierre o hamburguesa.
+- Escritorio intacto. Build TypeScript/Vite correcto; validación visual/interactiva en navegador pendiente por la restricción de Chromium ya indicada.

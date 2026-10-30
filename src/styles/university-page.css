@@ -23,6 +23,7 @@
 .university-page__areas h2 span { color: var(--color-blue); }
 .university-page__hero-copy > p { max-width: 40rem; margin-bottom: 0; font-size: clamp(1.1rem, 1.65vw, 1.4rem); line-height: 1.5; }
 .university-page__hero-button { margin-top: 1.75rem; }
+.university-page__hero-button-arrow { display: none; }
 .university-page__hero-button,
 .university-page__hero-button:hover,
 .university-page__hero-button:active,
@@ -128,4 +129,31 @@
 html:has(#formulario-university:target) { scroll-padding-top: 5rem; }
 @media (max-width: 680px) {
   html:has(#formulario-university:target) { scroll-padding-top: 5.65rem; }
+}
+
+@media (max-width: 680px) {
+  .university-page__hero-inner { gap: 2.5rem; }
+  .university-page__hero .university-page__hero-button {
+    width: auto;
+    min-height: 2.75rem;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    justify-content: flex-start;
+    gap: 0.65rem;
+    text-align: left;
+  }
+  .university-page__hero .university-page__hero-button,
+  .university-page__hero .university-page__hero-button:hover,
+  .university-page__hero .university-page__hero-button:active,
+  .university-page__hero .university-page__hero-button:focus-visible {
+    color: var(--color-blue);
+    background: transparent;
+    border-color: transparent;
+  }
+  .university-page__hero-button-arrow { display: inline; }
+  .university-page__hero-button:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+  }
 }
