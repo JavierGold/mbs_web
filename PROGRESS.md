@@ -162,3 +162,7 @@ Después de cada avance, actualizar el estado correspondiente con lo implementad
 - Autorizado cambiar y desplegar únicamente «Conoce nuestros servicios» del hero de Inicio, en escritorio y móvil: rosa #BE185D y hover/active #9D174D, texto blanco y foco global conservados.
 - Sin cambios de texto, dimensiones, ubicación, destino `/servicios` ni otros botones/páginas.
 - Validado: build TypeScript/Vite correcto y contraste blanco/fondo 6.04:1 normal y 7.88:1 hover/active. QA visual real no ejecutada por la restricción de Chromium ya registrada.
+
+### 2026-10-30 · CTA de Inicio restaurado al azul original
+- El usuario pidió regresar «Conoce nuestros servicios» al azul de los demás botones y autorizó su publicación. Se eliminó únicamente el override rosa anterior; el CTA vuelve a heredar `--color-blue` de `.button--primary` en escritorio y móvil.
+- Se conservan todos los ajustes móviles previos, texto, dimensiones, destino y foco. Build TypeScript/Vite correcto. QA visual real no ejecutada por la limitación de Chromium ya registrada.
