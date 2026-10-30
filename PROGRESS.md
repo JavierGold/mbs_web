@@ -136,3 +136,8 @@ Después de cada avance, actualizar el estado correspondiente con lo implementad
 - University: ancla del formulario sin margen duplicado; un único offset coincide con header compacto (5rem; 5.65rem hasta 680px). Entrada directa por hash reubica al montar.
 - Validado: npm ci y npm run build (TypeScript + Vite) correctos; cuatro conversiones pixel-exact y prueba del script con cinco fixtures RGBA. No hay scripts de lint/tests en package.json.
 - Pendiente: validación visual en navegador real y sitio publicado. Chromium local no inició por restricción de sockets del sandbox; no se ejecutó despliegue AWS en esta tarea. El workflow automático se integra por separado.
+
+### 2026-10-30 · Corrección de entrada en la primera carga
+- El usuario reportó aparición brusca del hero recién publicado. La implementación anterior permitía pintar la imagen opaca antes de `load/decode` y luego intentaba ocultarla/iniciar el fade en la misma tarea.
+- HeroImage ahora inicia transparente, espera carga/decodificación y dos frames antes del fade declarativo de 0.9 s, como los textos. No usa temporizadores que fuercen una imagen lenta a aparecer de golpe. El PNG de respaldo conserva esa secuencia; reduced motion es inmediato y error de ambos formatos deja visible el texto alternativo.
+- Validado: build TypeScript/Vite; pruebas de estado simuladas para caché fría/caliente, decode rechazado, fallback/error, reduced motion y cancelación al desmontar. La prueba visual real sigue pendiente por la restricción de Chromium del entorno; no se afirma medida de rendimiento ni QA visual completa.
