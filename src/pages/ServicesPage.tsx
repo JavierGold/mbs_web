@@ -1,3 +1,4 @@
+import { HeroImage } from '../components/HeroImage'
 import { servicesPageContent } from '../content/servicesPage'
 import { Reveal, useRevealVariants } from '../components/Reveal'
 import { motion, useReducedMotion } from 'motion/react'
@@ -13,11 +14,11 @@ export function ServicesPage() {
         <motion.div className="services-page__hero-copy" variants={revealVariants.heroGroup} initial={reducedMotion ? false : 'hidden'} animate="visible">
           <motion.h1 id="services-page-title" variants={revealVariants.heroText}>{hero.titleBefore} <span>{hero.titleAccent}</span>.</motion.h1>
           <motion.p variants={revealVariants.heroText}>{hero.text}</motion.p>
-          <motion.a className="button button--outline services-page__hero-action" variants={revealVariants.heroText} href="/contacto#formulario">{hero.button}</motion.a>
+          <motion.a className="button button--outline services-page__hero-action" variants={revealVariants.heroText} href="/contacto">{hero.button}</motion.a>
         </motion.div>
-        <motion.figure className="services-page__graphic" variants={revealVariants.heroGraphic} initial={reducedMotion ? false : 'hidden'} animate="visible" transition={{ duration: .9, delay: .15, ease: 'easeOut' }}>
-          <img src={hero.image} width={hero.imageWidth} height={hero.imageHeight} alt="" />
-        </motion.figure>
+        <figure className="services-page__graphic">
+          <HeroImage src={hero.image} width={hero.imageWidth} height={hero.imageHeight} alt="" />
+        </figure>
       </div>
     </section>
 
@@ -25,7 +26,7 @@ export function ServicesPage() {
       <div className="service-detail__inner page-container">
         <motion.div className="service-detail__media" variants={revealVariants.itemFade}>
           <span className="service-detail__number" aria-hidden="true">{section.number}</span>
-          <img src={section.image} width={section.imageWidth} height={section.imageHeight} alt="" />
+          <img loading="lazy" decoding="async" src={section.image} width={section.imageWidth} height={section.imageHeight} alt="" />
         </motion.div>
         <motion.div className="service-detail__content" variants={revealVariants.heroText}>
           <div className="service-detail__copy">

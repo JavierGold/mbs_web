@@ -1,3 +1,4 @@
+import { HeroImage } from '../components/HeroImage'
 import { useEffect, useState, type FormEvent } from 'react'
 import { FormSubmissionStatus, FormSubmitButton } from '../components/FormSubmissionStatus'
 import { contactPageContent } from '../content/contactPage'
@@ -30,9 +31,9 @@ export function ContactPage() {
           <motion.h1 id="contact-page-title" variants={revealVariants.heroText}>{contactPageContent.title}</motion.h1>
           <motion.p variants={revealVariants.heroText}>{contactPageContent.description}</motion.p>
         </motion.div>
-        <motion.div className="contact-page__art" variants={revealVariants.heroGraphic} initial={reducedMotion ? false : 'hidden'} animate="visible" transition={{ duration: .9, delay: .15, ease: 'easeOut' }}>
-          <img src={contactPageContent.image} alt={contactPageContent.imageAlt} />
-        </motion.div>
+        <div className="contact-page__art">
+          <HeroImage src={contactPageContent.image} width={1408} height={1117} alt={contactPageContent.imageAlt} />
+        </div>
       </div>
     </section>
     <Reveal as="section" className="contact-page__form-section" id="formulario" labelledBy="contact-form-title" variant="fade">

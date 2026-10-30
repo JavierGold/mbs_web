@@ -59,7 +59,7 @@
 .university-page__areas-list li:first-child { border-top: 1px solid var(--color-line); }
 .university-page__areas-list li > span { color: var(--color-blue); font-size: clamp(1.5rem, 1.75vw, 1.875rem); font-weight: 700; }
 .university-page__areas-list p { margin: 0; color: var(--color-navy); font-size: clamp(1.35rem, 1.75vw, 1.875rem); line-height: 1.25; }
-.university-page__form-section { scroll-margin-top: 8.75rem; }
+.university-page__form-section { scroll-margin-top: 0; }
 .university-page__form-inner { display: grid; grid-template-columns: minmax(0, .78fr) minmax(0, 1.22fr); align-items: start; gap: clamp(3rem, 7vw, 7rem); }
 .university-page__form-heading h2 { margin-bottom: 1.25rem; }
 .university-page__form-heading p { max-width: 36rem; margin-bottom: 0; font-size: clamp(1.05rem, 1.45vw, 1.25rem); line-height: 1.52; }
@@ -117,11 +117,15 @@
   .university-page__growth-item:last-child { grid-column: auto; padding: 1.5rem 0; border-right: 0; border-bottom: 1px solid var(--color-line); }
   .university-page__growth-item:last-child { border-bottom: 0; }
   .university-form { grid-template-columns: 1fr; gap: 1.1rem; }
-  .university-form__field--full,
-  .university-form__submit,
-  .university-page__form-section { scroll-margin-top: 5.65rem; }
+  .university-page__form-section { scroll-margin-top: 0; }
   .university-page__areas-list li { min-height: 4.75rem; grid-template-columns: 2.8rem minmax(0, 1fr); gap: .75rem; padding-block: 1rem; }
   .university-page__areas-list li > span { font-size: clamp(1.2rem, 5vw, 1.5rem); }
   .university-page__areas-list p { font-size: clamp(1.15rem, 5vw, 1.35rem); }
   .university-form { padding: 1.25rem; gap: 1.1rem; }
+}
+
+/* Only this anchor: one offset, matching the compact sticky header. */
+html:has(#formulario-university:target) { scroll-padding-top: 5rem; }
+@media (max-width: 680px) {
+  html:has(#formulario-university:target) { scroll-padding-top: 5.65rem; }
 }

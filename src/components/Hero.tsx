@@ -1,3 +1,4 @@
+import { HeroImage } from './HeroImage'
 import { homeContent } from '../content/home'
 import { motion, useReducedMotion } from 'motion/react'
 import { useRevealVariants } from './Reveal'
@@ -14,6 +15,6 @@ export function Hero() {
         <a className="button button--outline" href="/contacto">{homeContent.contactCta}</a>
       </motion.div>
     </motion.div>
-    <motion.div className="hero__visual" variants={revealVariants.heroGraphic} initial={reducedMotion ? false : 'hidden'} animate="visible" transition={{ duration: reducedMotion ? 0 : .9, delay: reducedMotion ? 0 : .15, ease: 'easeOut' }}><img src="/img/mainframe.png" alt="" /></motion.div>
+    <div className="hero__visual"><HeroImage src="/img/mainframe.png" width={855} height={715} alt="" /></div>
   </main>
 }

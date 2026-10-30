@@ -72,7 +72,7 @@ No dividir nuevamente el trabajo en fases por cada sección. Los cambios menores
 
 ### Acción principal
 
-El botón del hero **«Hablemos de tu proyecto»** dirige a **`/contacto#formulario`**. El CTA compartido mantiene **`/contacto`**.
+El botón del hero **«Hablemos de tu proyecto»** dirige a **`/contacto`**. El CTA compartido mantiene **`/contacto`**.
 
 La página Contacto deberá incluir en una etapa posterior un formulario con `id="formulario"`. No construirlo ahora ni considerar funcional el desplazamiento al ancla mientras ese elemento no exista.
 
@@ -127,7 +127,7 @@ Conservar el enrutamiento existente. El texto visible de los controles se define
 - Nosotros: `/nosotros`.
 - University: `/university`.
 - Contacto y los CTA de Inicio: `/contacto`.
-- Botón principal del hero de Servicios: `/contacto#formulario`.
+- Botón principal del hero de Servicios: `/contacto`.
 - Enlace «Conoce University.» de Nosotros: `/university`.
 - Administración de proyectos: `/nosotros#administracion-de-proyectos`.
 - Aviso de privacidad: mantener como texto sin enlace hasta que exista contenido y destino aprobados. No crear una sexta página legal en esta etapa.
@@ -153,7 +153,7 @@ Los datos de contacto definidos están en `CONTENT.md`. El correo utiliza `mailt
 - Página Servicios completa y fiel a `CONTENT.md` y `DESIGN.md`, con los cuatro servicios en su orden y sus anclas correctas.
 - Título, descripción, botón y gráfico legibles y equilibrados en los tamaños revisados.
 - Ruta de Servicios accesible y navegación activa correcta.
-- Botón configurado con `/contacto#formulario`; el formulario de clientes ya está disponible como interfaz, con backend y Aviso de privacidad pendientes.
+- Botón configurado con `/contacto`; el formulario de clientes ya está disponible como interfaz, con backend y Aviso de privacidad pendientes.
 - Inicio y los ajustes manuales existentes conservados.
 - Header, CTA y footer compartidos sin duplicación ni cambios de diseño.
 - Dos fases registradas y resultado final sujeto a aprobación visual del usuario. No tratar una propuesta de distribución como una imagen aprobada.

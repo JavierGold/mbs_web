@@ -26,7 +26,7 @@ $env:AWS_PROFILE = 'mbs'
 aws sts get-caller-identity
 ```
 
-Si ya tienes un perfil válido, solo selecciónalo. Confirma que la cuenta mostrada es la correcta. El usuario/rol debe poder administrar los recursos S3/CloudFront definidos y subir los archivos; no se crean usuarios IAM ni credenciales en este paquete. No uses credenciales root.
+Si ya tienes un perfil válido, solo selecciónalo. Confirma que la cuenta mostrada es la correcta. El usuario/rol debe poder administrar los recursos S3/CloudFront definidos y subir los archivos; no se crean usuarios IAM ni claves permanentes. La automatización opcional añade un rol OIDC después de habilitarla y revisar su plan. No uses credenciales root.
 
 ## Crear infraestructura (tú ejecutas estos pasos)
 
@@ -65,7 +65,7 @@ El script:
 
 El script solo sube `dist/`, nunca el código completo, `.env`, `node_modules` o estado Terraform. Revisa que `dist` no contenga archivos privados: las variables `VITE_*` y todos los assets del frontend son públicos. Si agregas manualmente archivos sin hash en `dist/assets`, mueve esos archivos fuera de esa carpeta o adapta su caché antes de publicar.
 
-No se borran assets de versiones anteriores para no romper pestañas abiertas. Podrás limpiar versiones antiguas más adelante con una política acordada. El bucket tiene `force_destroy = false`: Terraform no vaciará un bucket con contenido automáticamente. No se incluye borrado ni despliegue automático al hacer push.
+No se borran assets de versiones anteriores para no romper pestañas abiertas. Podrás limpiar versiones antiguas más adelante con una política acordada. El bucket tiene `force_destroy = false`: Terraform no vaciará un bucket con contenido automáticamente. No se incluye borrado automático. Para publicar con cada push a main, activa el flujo opcional explicado en [github-deploy.md](github-deploy.md).
 
 ## Verificación después de publicar
 
@@ -91,3 +91,7 @@ Para un dominio propio, el siguiente paso sería ACM en `us-east-1`, aliases de 
 - [CloudFront distribution en Terraform](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudfront_distribution)
 - [Funciones de reescritura](https://github.com/aws-samples/amazon-cloudfront-functions/tree/main/url-rewrite-single-page-apps)
 - [AWS CLI: copia S3](https://docs.aws.amazon.com/cli/latest/reference/s3/cp.html)
+
+## Automatización opcional
+
+[Configuración única de GitHub Actions + OIDC](github-deploy.md). Está deshabilitada hasta habilitarla explícitamente en Terraform y configurar las variables del repositorio. El workflow publica el frontend, nunca aplica Terraform.

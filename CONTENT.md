@@ -168,7 +168,7 @@ Trabajamos con responsables de tecnología, aplicaciones y proyectos de bancos e
 Hablemos de tu proyecto
 
 **Destino**
-/contacto#formulario
+/contacto
 
 ### 2.2. Servicio 01 · Desarrollo de aplicaciones
 
@@ -521,7 +521,7 @@ Reutilizar exactamente el footer existente de Inicio y Servicios: componente, co
 ## Destinos y contenido pendiente
 
 - El header se comparte entre las páginas. La navegación usa «Servicios» con destino `/servicios`.
-- El botón del hero de Servicios apunta a `/contacto#formulario`; el ancla ahora existe. El envío de Contacto queda pendiente del aviso de privacidad aprobado y del backend.
+- El botón del hero de Servicios apunta a `/contacto`; abre el inicio de Contacto para mostrar su hero. El envío de Contacto queda pendiente del aviso de privacidad aprobado y del backend.
 - Correo: `mailto:567498jav@gmail.com`. Teléfono: `tel:+524771815045`.
 - Las redes sociales se muestran como texto hasta recibir URL reales. Aviso de privacidad permanece sin enlace.
 - Nosotros tiene contenido consolidado en la sección Página 3; el CTA de cierre reutiliza ahora el CTA compartido de Inicio. University tiene fases 1 y 2 implementadas, pendientes de revisión del usuario. Contacto incorpora hero, interfaz del formulario y footer compartido; el aviso de privacidad, backend y demás secciones quedan pendientes.

@@ -5,6 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#f7fafd" />
     <link rel="icon" href="data:," />
+    <script>
+      // Start only the current page's hero before the React bundle is evaluated.
+      const heroImages = { '/': 'mainframe', '/index.html': 'mainframe', '/servicios': 'servicios', '/nosotros': 'nosotros', '/university': 'university', '/contacto': 'contactos' };
+      const heroName = heroImages[location.pathname.replace(/\/+$/, '') || '/'];
+      if (heroName) {
+        const preload = document.createElement('link');
+        preload.rel = 'preload';
+        preload.as = 'image';
+        preload.type = 'image/webp';
+        preload.href = '/img/' + heroName + '.webp';
+        preload.fetchPriority = 'high';
+        document.head.appendChild(preload);
+      }
+    </script>
     <title>MBS · Mainframe &amp; Beyond Solutions</title>
   </head>
   <body>

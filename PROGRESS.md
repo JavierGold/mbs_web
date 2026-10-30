@@ -125,3 +125,14 @@ Después de cada avance, actualizar el estado correspondiente con lo implementad
 - Publicación de estos archivos en `main` autorizada por el usuario; no se ha ejecutado infraestructura ni despliegue en AWS.
 - Validación: revisión estática y 12 pruebas Node de rutas aprobadas. Terraform fmt/validate/plan, PowerShell y build completo pendientes de ejecución en un entorno equipado; no afirmar despliegue validado.
 - Siguiente paso: seleccionar perfil/cuenta AWS, ejecutar validaciones y revisar el plan antes de autorizar/applicar recursos; seguir `infra/terraform/README.md`. Los backends de formularios siguen fuera de este alcance.
+
+## 2026-10-30 · Carga de heroes y destinos de botones
+- Autorizado por el usuario: optimizar heroes sin modificar diseño, en main. Se conservan todos los PNG originales.
+- HeroImage compartido: WebP con fallback al PNG, carga eager/prioridad alta, dimensiones intrínsecas y entrada de opacidad tras load/decode. Reduced motion y fallos mantienen visible la imagen. Se elimina la animación duplicada del contenedor.
+- Preload exclusivo del hero de la ruta actual; gráficos inferiores de Servicios/Nosotros y CTA compartido con carga diferida.
+- Cuatro WebP lossless locales comprobados píxel RGBA a píxel: Inicio 908633→626174 bytes; Nosotros 1550853→1119922; University 2053823→1379742; Contacto 1021272→657088.
+- `scripts/optimize-hero-images.py` regenera los cinco desde sus PNG con Python 3.12/Pillow 12.0.0 antes del build automatizado. Servicios se generará en CI: el conector no permitió transferir su PNG >1 MB al entorno local. En un despliegue manual sin WebP, se usa el PNG original; para regenerarlos localmente, instalar Pillow 12.0.0 y ejecutar `python scripts/optimize-hero-images.py .` antes del despliegue. Regenerar también al cambiar cualquier PNG.
+- Solo botón hero de Servicios: destino `/contacto`, sin ancla, para ver el hero de Contacto.
+- University: ancla del formulario sin margen duplicado; un único offset coincide con header compacto (5rem; 5.65rem hasta 680px). Entrada directa por hash reubica al montar.
+- Validado: npm ci y npm run build (TypeScript + Vite) correctos; cuatro conversiones pixel-exact y prueba del script con cinco fixtures RGBA. No hay scripts de lint/tests en package.json.
+- Pendiente: validación visual en navegador real y sitio publicado. Chromium local no inició por restricción de sockets del sandbox; no se ejecutó despliegue AWS en esta tarea. El workflow automático se integra por separado.

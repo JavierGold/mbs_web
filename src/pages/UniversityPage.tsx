@@ -1,4 +1,5 @@
-import { useState, type ChangeEvent, type DragEvent, type FormEvent } from 'react'
+import { HeroImage } from '../components/HeroImage'
+import { useEffect, useState, type ChangeEvent, type DragEvent, type FormEvent } from 'react'
 import { FormSubmissionStatus, FormSubmitButton } from '../components/FormSubmissionStatus'
 import { universityPageContent as content } from '../content/universityPage'
 import { runFormSubmission, type FormSubmissionState } from '../forms/formSubmission'
@@ -8,6 +9,14 @@ import { motion, useReducedMotion } from 'motion/react'
 const maxFileSize = 5 * 1024 * 1024
 
 export function UniversityPage() {
+  useEffect(() => {
+    if (window.location.hash !== '#formulario-university') return
+    const frame = requestAnimationFrame(() => {
+      document.getElementById('formulario-university')?.scrollIntoView({ block: 'start' })
+    })
+    return () => cancelAnimationFrame(frame)
+  }, [])
+
   const reducedMotion = useReducedMotion()
   const revealVariants = useRevealVariants()
   const [selectedFile, setSelectedFile] = useState<File | null>(null)
@@ -64,9 +73,9 @@ export function UniversityPage() {
           <motion.p variants={revealVariants.heroText}>{content.hero.descriptionStart}<span>{content.hero.descriptionAccent}</span>{content.hero.descriptionEnd}</motion.p>
           <motion.a className="button button--outline university-page__hero-button" variants={revealVariants.heroText} href={content.hero.buttonHref}>{content.hero.button}</motion.a>
         </motion.div>
-        <motion.figure className="university-page__hero-art" variants={revealVariants.heroGraphic} initial={reducedMotion ? false : 'hidden'} animate="visible" transition={{ duration: .9, delay: .15, ease: 'easeOut' }}>
-          <img src={content.hero.image} width={content.hero.imageWidth} height={content.hero.imageHeight} alt="Laptop con código y libro técnico abierto." />
-        </motion.figure>
+        <figure className="university-page__hero-art">
+          <HeroImage src={content.hero.image} width={content.hero.imageWidth} height={content.hero.imageHeight} alt="Laptop con código y libro técnico abierto." />
+        </figure>
       </div>
     </section>
 
