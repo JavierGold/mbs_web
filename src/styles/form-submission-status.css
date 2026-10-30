@@ -1,0 +1,35 @@
+.form-submission-status {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: flex-start;
+  gap: .7rem;
+  padding: .85rem 1rem;
+  border: 1px solid var(--color-line);
+  border-radius: .4rem;
+  color: var(--color-copy);
+  font-size: .98rem;
+  line-height: 1.45;
+}
+.form-submission-status--idle {
+  min-height: 1.4em;
+  margin: -.7rem 0 0;
+  padding: 0;
+  border: 0;
+}
+.form-submission-status__icon {
+  flex: 0 0 1.45rem;
+  width: 1.45rem;
+  height: 1.45rem;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 50%;
+  font-size: .95rem;
+  font-weight: 700;
+  line-height: 1;
+}
+.form-submission-status--sending { background: #f4f8fd; }
+.form-submission-status--success { border-color: #a7d9bd; background: #effaf3; color: #145c36; }
+.form-submission-status--success .form-submission-status__icon { background: #217a49; color: var(--color-white); }
+.form-submission-status--error { border-color: #e8b4b4; background: #fff4f4; color: #8d2222; }
+.form-submission-status--error .form-submission-status__icon { background: #a32929; color: var(--color-white); }
+.form-submission-status--unavailable { background: #f4f8fd; }

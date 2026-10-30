@@ -1,0 +1,92 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - link "MBS, Inicio" [ref=e5] [cursor=pointer]:
+      - /url: /
+      - generic [ref=e6]: MBS
+      - generic [ref=e7]: Mainframe & Beyond Solutions
+    - navigation "Navegación principal" [ref=e8]:
+      - link "Inicio" [ref=e9] [cursor=pointer]:
+        - /url: /
+      - link "Servicios y tecnologías" [ref=e10] [cursor=pointer]:
+        - /url: /servicios
+      - link "Nosotros" [ref=e11] [cursor=pointer]:
+        - /url: /nosotros
+      - link "University" [ref=e12] [cursor=pointer]:
+        - /url: /university
+      - link "Contacto" [ref=e13] [cursor=pointer]:
+        - /url: /contacto
+        - text: Contacto
+        - generic [aria-hidden] [ref=e14]: →
+  - main [ref=e15]:
+    - generic [ref=e16]:
+      - heading "Tecnología para sistemas que no pueden detenerse." [level=1] [ref=e17]
+      - paragraph [ref=e18]: Desarrollamos, mantenemos y evolucionamos aplicaciones para los procesos del sector financiero y bancario, combinando tecnologías de vanguardia y legacy.
+      - generic [ref=e19]:
+        - link "Conoce nuestros servicios" [ref=e20] [cursor=pointer]:
+          - /url: /servicios
+          - text: Conoce nuestros servicios
+          - generic [aria-hidden] [ref=e21]: →
+        - link "Hablemos de tu proyecto" [ref=e22] [cursor=pointer]:
+          - /url: /contacto
+  - region [ref=e24]:
+    - heading "30 años de experiencia" [level=2] [ref=e25]:
+      - generic [ref=e26]: "30"
+      - generic [ref=e27]: años de experiencia
+    - paragraph [ref=e28]: La experiencia de nuestro equipo respalda a las áreas de tecnología de bancos e instituciones financieras en sus proyectos informáticos.
+  - region [ref=e29]:
+    - generic [ref=e30]:
+      - heading "Nuestros servicios para sistemas críticos" [level=2] [ref=e31]: Nuestros serviciospara sistemas críticos
+      - generic [ref=e32]:
+        - article [ref=e33]:
+          - heading "Desarrollo de aplicaciones" [level=3] [ref=e34]
+          - paragraph [ref=e35]: Desarrollo de aplicaciones Mainframe, Web y móviles para productos y servicios bancarios.
+        - article [ref=e36]:
+          - heading "Mantenimiento y evolución" [level=3] [ref=e37]
+          - paragraph [ref=e38]: Corrección de errores, actualización de programas y adaptación a nuevos requerimientos.
+        - article [ref=e39]:
+          - heading "Bases de datos y procesamiento de información" [level=3] [ref=e40]
+          - paragraph [ref=e41]: Trabajo con bases de datos y soluciones de Data Warehouse y Big Data.
+        - article [ref=e42]:
+          - heading "Integración de aplicaciones" [level=3] [ref=e43]
+          - paragraph [ref=e44]: Conectamos aplicaciones y sistemas para intercambiar información y coordinar procesos.
+      - link "Ver servicios" [ref=e45] [cursor=pointer]:
+        - /url: /servicios
+        - text: Ver servicios
+        - generic [aria-hidden] [ref=e46]: →
+  - region [ref=e47]:
+    - heading "Trabajamos con tecnologías legacy y de vanguardia" [level=2] [ref=e48]
+    - paragraph [ref=e49]: Nuestra experiencia abarca desde plataformas empresariales y sistemas de misión crítica hasta arquitecturas, integración y tecnologías de datos. Trabajamos con el entorno tecnológico de cada cliente, combinando conocimiento especializado con la capacidad de adaptarnos a nuevas herramientas y necesidades.
+  - region "Tecnologías" [ref=e50]:
+    - generic [ref=e51]:
+      - generic [ref=e52]:
+        - article [ref=e53]:
+          - heading "Unisys" [level=2] [ref=e54]
+          - paragraph [ref=e55]: Mainframe y sistemas legacy.
+          - generic [ref=e56]:
+            - paragraph [ref=e57]: COBOL · ALGOL · DMSII
+            - paragraph [ref=e58]: WFL · COMS
+        - article [ref=e59]:
+          - heading "Tandem / NonStop" [level=2] [ref=e60]
+          - paragraph [ref=e61]: Sistemas de misión crítica.
+          - generic [ref=e62]:
+            - paragraph [ref=e63]: Guardian · OSS · COBOL
+            - paragraph [ref=e64]: TACL · C · SQL NonStop
+        - article [ref=e65]:
+          - heading "Desarrollo e integración" [level=2] [ref=e66]
+          - paragraph [ref=e67]: Aplicaciones Web y móviles e integración de sistemas.
+          - generic [ref=e68]:
+            - paragraph [ref=e69]: Java · Unix · Oracle
+            - paragraph [ref=e70]: TIBCO · TUXEDO · WebLogic
+            - paragraph [ref=e71]: Arquitectura orientada a servicios (SOA).
+      - generic [ref=e72]:
+        - article [ref=e73]:
+          - heading "Procesamiento de datos" [level=2] [ref=e74]
+          - generic [ref=e75]:
+            - paragraph [ref=e76]: Teradata · Ab Initio
+            - paragraph [ref=e77]: Data Warehouse · Big Data
+        - article [ref=e78]:
+          - heading "Seguridad" [level=2] [ref=e79]
+          - generic [ref=e80]:
+            - paragraph [ref=e81]: Seguridad de aplicaciones
+            - paragraph [ref=e82]: Autenticación
+            - paragraph [ref=e83]: Protección de información

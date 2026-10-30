@@ -1,0 +1,19 @@
+:root {
+  color-scheme: light;
+  --color-paper: #f7fafd;
+  --color-white: #ffffff;
+  --color-navy: #071c50;
+  --color-deep-navy: #081d38;
+  --color-footer: #07172e;
+  --color-blue: #0877db;
+  --color-copy: #596487;
+  --color-line: #e7edf5;
+  --font-sans: Arial, Helvetica, sans-serif;
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+  --space-5: 3rem;
+  --page-gutter: clamp(1.25rem, 4.85vw, 5.1rem);
+  --content-max: 100rem;
+}
