@@ -4,6 +4,8 @@ Actualizado: 29 de octubre de 2026.
 
 ## Estado actual
 
+- **Ajuste de botones:** los CTA de Servicios y University usan los mismos colores de Contacto del header (`--color-blue`, `--color-white`) en estado normal, hover, active y focus; conservan el contorno de foco global. Build correcto. La revisión visual de escritorio/móvil no pudo completarse: el navegador automatizado no está disponible y Edge headless terminó con error antes de generar capturas.
+
 - **Lote actual (2026-10-29):** Experiencia bancaria y PMI de Nosotros actualizados; sección de proyecto exitoso ahora es de dos columnas con «exitoso» resaltado; University limita disponibilidad a «Medio tiempo.» y «Tiempo completo.»; Contacto ya no solicita la casilla de privacidad. Motion reemplaza el observador global con un componente compartido, entradas de hero, revelados por scroll, stagger automático 01–07 y movimiento reducido. El Aviso del footer sigue como texto sin destino; Contacto y University continúan sin backend real.
 - **Verificado:** `npm.cmd run build` correcto. HTTP 200 en las cinco rutas y en los cinco PNG implicados. No se pudo hacer revisión visual/interactiva: Playwright CLI no pudo iniciarse porque Bash/WSL devolvió `E_ACCESSDENIED`; el navegador automatizado también se detuvo por no poder determinar la URL activa. Pendiente revisión visual responsive, interacción del menú y comportamiento de animaciones en navegador.
 - **Archivos del lote:** `src/components/Reveal.tsx` (nuevo), componentes Inicio y páginas Servicios/Nosotros/University/Contacto, estilos de Nosotros/Contacto/Inicio, contenido de Nosotros/University/Contacto, `App.tsx`, `index.html`, y `CONTENT.md`, `DESIGN.md`, `SPEC.md`.
