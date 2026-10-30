@@ -203,6 +203,15 @@ button:focus-visible {
   background: var(--color-blue);
   border-color: var(--color-blue);
 }
+.hero__actions > .button--primary {
+  background: #be185d;
+  border-color: #be185d;
+}
+.hero__actions > .button--primary:hover,
+.hero__actions > .button--primary:active {
+  background: #9d174d;
+  border-color: #9d174d;
+}
 .button--primary span {
   font-size: 1.3rem;
   line-height: 0.8;

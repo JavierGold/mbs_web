@@ -157,3 +157,8 @@ Después de cada avance, actualizar el estado correspondiente con lo implementad
 - Autorizado ampliar el mismo estilo de enlace azul con flecha, sin recuadro/fondo, al CTA del hero University y a Contacto del menú hasta 680 px.
 - University mantiene gráfico, enlace al formulario y offset; conserva 40 px antes de la ilustración. Contacto queda alineado con los demás enlaces, con la misma tipografía y foco/indicador de ruta activa. No se cambia la lógica de navegación, cierre o hamburguesa.
 - Escritorio intacto. Build TypeScript/Vite correcto; validación visual/interactiva en navegador pendiente por la restricción de Chromium ya indicada.
+
+### 2026-10-30 · Botón principal de Inicio rosa
+- Autorizado cambiar y desplegar únicamente «Conoce nuestros servicios» del hero de Inicio, en escritorio y móvil: rosa #BE185D y hover/active #9D174D, texto blanco y foco global conservados.
+- Sin cambios de texto, dimensiones, ubicación, destino `/servicios` ni otros botones/páginas.
+- Validado: build TypeScript/Vite correcto y contraste blanco/fondo 6.04:1 normal y 7.88:1 hover/active. QA visual real no ejecutada por la restricción de Chromium ya registrada.
