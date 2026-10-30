@@ -12,7 +12,7 @@ export function Hero() {
       <motion.p variants={revealVariants.heroText}>{homeContent.description}</motion.p>
       <motion.div className="hero__actions" variants={revealVariants.heroText}>
         <a className="button button--primary" href="/servicios">{homeContent.servicesCta}<span aria-hidden="true">→</span></a>
-        <a className="button button--outline" href="/contacto">{homeContent.contactCta}</a>
+        <a className="button button--outline hero__contact" href="/contacto">{homeContent.contactCta}<span className="hero__contact-arrow" aria-hidden="true">→</span></a>
       </motion.div>
     </motion.div>
     <div className="hero__visual"><HeroImage src="/img/mainframe.png" width={855} height={715} alt="" /></div>

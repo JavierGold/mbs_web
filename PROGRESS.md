@@ -141,3 +141,9 @@ Después de cada avance, actualizar el estado correspondiente con lo implementad
 - El usuario reportó aparición brusca del hero recién publicado. La implementación anterior permitía pintar la imagen opaca antes de `load/decode` y luego intentaba ocultarla/iniciar el fade en la misma tarea.
 - HeroImage ahora inicia transparente, espera carga/decodificación y dos frames antes del fade declarativo de 0.9 s, como los textos. No usa temporizadores que fuercen una imagen lenta a aparecer de golpe. El PNG de respaldo conserva esa secuencia; reduced motion es inmediato y error de ambos formatos deja visible el texto alternativo.
 - Validado: build TypeScript/Vite; pruebas de estado simuladas para caché fría/caliente, decode rechazado, fallback/error, reduced motion y cancelación al desmontar. La prueba visual real sigue pendiente por la restricción de Chromium del entorno; no se afirma medida de rendimiento ni QA visual completa.
+
+### 2026-10-30 · Hero de Inicio más limpio en móvil
+- Cambio autorizado solo hasta 680 px: CTA principal conservado; «Hablemos de tu proyecto» pasa a enlace sin recuadro con flecha y área táctil mínima de 44 px.
+- Separación de 40 px antes del gráfico; imagen centrada al 80% del ancho disponible, sin márgenes negativos ni recortes. El hero conserva altura natural y permite desplazamiento.
+- Escritorio y las otras páginas permanecen sin cambios; se conservan destinos, textos, colores y animación de HeroImage.
+- Validado: build TypeScript/Vite correcto y revisión dirigida de reglas responsive. No hay scripts de lint o tests en package.json. La validación visual en navegador real sigue pendiente porque Chromium no inicia en este entorno.

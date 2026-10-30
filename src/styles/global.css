@@ -183,6 +183,9 @@ button:focus-visible {
   gap: 1rem;
   margin-top: 1.8rem;
 }
+.hero__contact-arrow {
+  display: none;
+}
 .button {
   min-height: 3.55rem;
   padding: 0.85rem 1.45rem;
@@ -359,19 +362,20 @@ button:focus-visible {
   .hero {
     min-height: auto;
     grid-template-columns: 1fr;
-    gap: 0.3rem;
+    gap: 2.5rem;
     padding-top: 3.15rem;
     padding-bottom: 1.8rem;
   }
   .hero__copy {
     order: 1;
+    padding-bottom: 0;
   }
   .hero__visual {
     order: 2;
-    margin: -0.1rem calc(var(--page-gutter) * -1) 0;
+    margin: 0;
   }
   .hero__visual img {
-    width: 100%;
+    width: 80%;
     max-width: none;
   }
   .hero h1 {
@@ -386,6 +390,26 @@ button:focus-visible {
   }
   .hero__actions {
     margin-top: 1.35rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  .hero__contact {
+    width: auto;
+    min-height: 2.75rem;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    justify-content: flex-start;
+    gap: 0.65rem;
+    text-align: left;
+  }
+  .hero__contact-arrow {
+    display: inline;
+  }
+  .hero__contact:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
   }
   .button {
     min-height: 3.2rem;
